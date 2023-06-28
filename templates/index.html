@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Text Utils</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<style>
+    *{
+            font-family: 'Poppins', sans-serif;
+        }
+</style>
+<body>
+    
+<br>
+    
+    <h1 align="center">Modify Your Text</h1><br>
+    <div style="display:flex;justify-content:center;">
+        <form action="modify" method="post">{% csrf_token %}
+            <textarea class="form-control" name="text" placeholder="Try With Some Text...." id="floatingTextarea2"
+                style="height: 191px; width: 546px; font-size: 20px; border: 2px solid;border-radius: 8px;"></textarea>
+            <br>
+            <br>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name="upper" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                    style="font-size: 18px;">Convert To UpperCase
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name="lower" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                    style="font-size: 18px;">Convert To LowerCase
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name="removepunc" type="checkbox" role="switch"
+                    id="flexSwitchCheckChecked" style="font-size: 18px;">Remove Punchuation
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name="removespace" type="checkbox" role="switch"
+                    id="flexSwitchCheckChecked" style="font-size: 18px;">Remove Spaces
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name="removenew" type="checkbox" role="switch"
+                    id="flexSwitchCheckChecked" style="font-size: 18px;">Remove new lines
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" >Click To Modify</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
